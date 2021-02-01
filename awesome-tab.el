@@ -1911,7 +1911,11 @@ Other buffer group by `awesome-tab-get-group-name' with project name."
 
      ;; Hide tab if current buffer is flycheck buffer.
      (string-prefix-p "*flycheck" name)
-
+     
+      ;;custom
+     (string-prefix-p "*Flycheck errors" name)
+     (string-prefix-p "*lsp" name)
+     
      ;; Hide blacklist if emacs version < 27 (use header-line).
      (and (eq awesome-tab-display-line 'header-line)
           (or (string-prefix-p "*Compile-Log*" name)
